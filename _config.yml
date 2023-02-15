@@ -1,0 +1,105 @@
+# theme: jekyll-theme-leap-day
+
+# Site settings
+title: rainpole.io
+email: hello@rainpole.io
+author:
+show_downloads: false
+description: rainpole.io
+#url: veba.io
+logo: veba-header-logo.svg
+banner_main: assets/img/heroes/veba_hero.svg
+banner_alt: assets/img/heroes/veba_hero.svg
+people: true
+people_limit: 12
+twitter:
+  username: VMWEventBroker
+  card: summary
+vm_logo: vm-logo.png
+gh_repo: https://github.com/rainpole/rainpole.github.io
+repository: rainpole/rainpole.github.io
+
+hero:
+  background-color: ocean
+footer:
+  title: Getting Started
+  content: To help you get started, see the documentation.
+  cta_title: ''
+  cta_url: /kb/
+  cta_text: Documentation
+  vm-link: https://github.com/vmware
+
+footer_social_links:
+  Twitter:
+    fa_icon: fab fa-twitter
+    url: https://twitter.com/VMWEventBroker
+  Slack:
+    fa_icon: fab fa-slack
+    url: https://vmwarecode.slack.com/archives/CQLT9B5AA
+  Email:
+    fa_icon: fas fa-envelope
+    url: mail:hello@rainpole.io
+  GitHub:
+    fa_icon: fab fa-github
+    url: https://github.com/rainpole/rainpole.github.io
+
+github:
+  zip_url: https://github.com/vmware-samples/vcenter-event-broker-appliance/archive/master.zip
+  fling_url: https://flings.vmware.com/vmware-event-broker-appliance
+
+collections:
+  - functions
+  - usecases
+
+page_gen:
+  - data: shortlinks
+    template: redirect
+    name: key
+    dir: docs
+
+versioning: false
+#latest: v0.3.0
+#versions:
+#- master
+#- v0.3.0
+#- v0.2.0
+
+# Tipue search settings
+tipue_search:
+  include:
+    pages: true
+  exclude:
+    files: [README.md, search.html, site/resources.md, assets/css/fonts/Metropolis/Open Font License.md, assets/css/fonts/Metropolis/README.md, assets/css/fonts/Metropolis/README.md]
+
+# Build settings
+permalink: /blog/:title/
+sass:
+  sass_dir: assets/css
+  style: :compressed
+
+# Use the following plug-ins
+plugins:
+  - jekyll-readme-index # use README.md as index.html
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-relative-links # Used to auto generate md links to html links
+  - jekyll-optional-front-matter # Parse Markdown files that do not have front-matter callouts
+  - jekyll-titles-from-headings # pull the page title from the first Markdown heading when none is specified.
+  - jekyll-paginate # pagination object for collections (e.g. posts)
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+
+# Include these subdirectories
+include:
+  - CONTRIBUTING.md
+  - README.md
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README-JEKYLL.md
+  - LICENSE
+  - CNAME
+  - '*.sh'
